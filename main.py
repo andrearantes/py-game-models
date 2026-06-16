@@ -1,9 +1,12 @@
 import json
+from pathlib import Path
 from db.models import Player, Race, Guild, Skill
 
 
 def main() -> None:
-    with open("./data/players.json") as f:
+    BASE_DIR = Path(__file__).resolve().parent
+    players_file = BASE_DIR / "data" / "players.json"
+    with open(players_file) as f:
         players_data = json.load(f)
 
     for player_data in players_data:
