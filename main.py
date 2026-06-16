@@ -5,7 +5,7 @@ from db.models import Player, Race, Guild, Skill
 
 def main() -> None:
     base_dir = Path(__file__).resolve().parent
-    players_file = base_dir / "data" / "players.json"
+    players_file = base_dir / "players.json"
     with open(players_file) as f:
         players_data = json.load(f)
 
